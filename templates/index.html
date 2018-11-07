@@ -1,0 +1,41 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+        <h1>Greeting! I'm Alex.</h1>
+        <label for="UserId">User Id:</label>
+        <input type="text" name="UserId" id="UserId" value="test_id" width="48" height="48">
+        <br>
+        <br>
+        <label for="UserSays">User says:</label>
+        <input type="text" name="UserSays" id="UserSays" value="我來了">
+        <label for="  Press Enter">Press Enter</label>
+        <hr>
+        <div id="divText" style="height:70%;overflow:scroll;"></div>
+</body>
+<script>        
+        $(function () {
+                $('#UserSays').keypress(function (e) {
+                        if (e.keyCode == 13) {
+                                var send_data = {
+                                        user_id: $('#UserId').val(),
+                                        user_says: $('#UserSays').val()
+                                };
+                                $.ajax({
+                                        url: "/chatbot",
+                                        type: "POST",
+                                        contentType: "application/json",
+                                        processData: false,
+                                        cache: false,
+                                        data: JSON.stringify(send_data),
+                                        success: function (response) {
+                                                $('#divText').prepend(response + "<br>");
+                                        },
+                                        error: function (error) {
+                                                console.log(error);
+                                                alert(error);
+                                        }
+                                });
+                        }
+                });
+        });
+</script>
