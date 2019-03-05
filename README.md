@@ -1,3 +1,3 @@
-# Tomoko
+# Wahoo
 
-Tomoko is a awesome chatbot framework.
+Wahoo is a awesome chatbot framework.
