@@ -79,6 +79,15 @@ class Engine:
         return self._engine_name
 
     def parse(self, user_input, state_id_list):
+        '''
+        Description:
+            將使用者輸入的語音語句進行前處理、取出語句中的實體、進行utterance mapping
+        Parameters:
+            user_input:使用者語音語句
+            state_id_list:
+        return:
+            EngineQueryResult object
+        '''
         user_input = self._preprocess(user_input)
         entities = self._extract_entities(user_input)
         matched_intent_id, prob, transfer_to_state_id, intent_parameters = self._map_utterance(
@@ -94,6 +103,12 @@ class Engine:
         return processed_input
 
     def _extract_entities(self, user_input):
+        '''
+        Description:
+            取出所需的實體
+        Parameters:
+            user_input : 使用者語音語句
+        '''
         return_entities_list = []
         for reg, entities_type in self._regex_keyword_list:
             tmp_input_for_replace = user_input
