@@ -1,0 +1,25 @@
+{
+    "SpeechCmds":
+    {
+        "CmdContent01":
+        {   
+            "CmdNum":1,
+            "CmdText":"小豆請倒數計時10秒",
+            "Synonyms":
+            [
+                "小豆請到樹計時十秒","小豆請道屬計時時秒"
+            ]
+        },
+        "CmdContent02":
+        {
+            "CmdNum": 2,
+            "CmdText": "小豆請幫第2組加5分",
+            "Synonyms": 
+            [
+                "小豆請到樹計時十秒",
+                "小豆請道屬計時時秒"
+            ]
+
+        }
+    }
+}

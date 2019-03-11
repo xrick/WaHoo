@@ -29,7 +29,7 @@ class Chatbot():
     def __init__(self):
         # system
         self.intent_dic = {}
-        self.engine_list = []
+        self.engine_list = [] 
         self.domain_list = []
         self.answer_formatter_dic = {}
 

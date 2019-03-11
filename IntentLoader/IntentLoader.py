@@ -54,8 +54,7 @@ class IntentLoader:
         def get_engine(domain_name, domain_data):
             keywords = self._db_interactor.get_keywords_dic(domain)
             intent_replacer = self._db_interactor.get_intent_replacer_dic()
-            re_intent_id_mapping_list = self._db_interactor.get_re_intentId_mapping(
-                domain)
+            re_intent_id_mapping_list = self._db_interactor.get_re_intentId_mapping(domain)
             re_intent_id_mapping_object_list = [
                 ReIntentMapping(re, intent_id, from_state_id, to_state_id) for intent_re_mapping_id, re, intent_id, from_state_id, to_state_id in re_intent_id_mapping_list]
             local_preprocessors = get_local_preprocessor_list(domain)
