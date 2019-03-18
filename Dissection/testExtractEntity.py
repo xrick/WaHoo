@@ -52,6 +52,8 @@ def main():
     #rep_str = "this is a {test} string for {demo}"
     #pattern = "((早|晚)上?|(上|中|下)午)?(([0-2]?\d)|一|二|兩|三|四|五|六|七|八|九|十|十一|十二)(點|:)(半|([0-5]\d))?|現在"
     #print()
+
+def testMain():
     
 if __name__ == "__main__":
     main()

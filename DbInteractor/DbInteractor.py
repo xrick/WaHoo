@@ -44,6 +44,7 @@ class DbInteractor():
     def get_keywords_dic(self, domain):
         with sqlite3.connect(self._db_file_path) as sqlite_conn:
             keyword_data = sqlite_conn.execute((
+                # Name: phone_number, Re: 09\d{2}-?\d{3}-?\d{3}
                 "SELECT K.Name, K.Re "
                 "FROM Keyword AS K "
                 "INNER JOIN DomainKeywordMapping AS DK ON DK.KeywordId=K.KeywordId "

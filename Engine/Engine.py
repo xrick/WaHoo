@@ -117,7 +117,7 @@ class Engine:
                 search_result = reg.search(tmp_input_for_replace)
                 if search_result != None:
                     tmp_input_for_replace = reg.sub(
-                        self.REPLACE_FORMATE.format(entities_type),
+                        self.REPLACE_FORMATE.format(entities_type), #
                         tmp_input_for_replace,
                         count=1
                     )
