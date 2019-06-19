@@ -53,7 +53,7 @@ class Chatbot():
                 current_intent, match_intent_record)
 
             return match_intent_record
-
+        #這裏的slot以intent_record.user_paramenters來表示
         def fill_slot_with_default(intent, intent_record):
             for para in intent.parameters:
                 if para.default_value and para.name not in intent_record.user_paramenters:
