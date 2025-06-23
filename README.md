@@ -6,7 +6,7 @@ Wahoo 是一個功能強大的自然語言處理 (NLP) 聊天機器人引擎，�
 
 本引擎採用模組化架構，將複雜的 NLP 任務拆解為清晰定義的元件，使其易於維護和擴展。
 
-![NLP Platform Architecture](Architectures/NLP%20Platform%20Architecture.pdf)
+![NLP Platform Architecture](Architectures/NLP_Platform_Architecture.pdf)
 
 其核心處理流程如下：
 
